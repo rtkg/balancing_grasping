@@ -22,6 +22,8 @@ D.P_l.dmax=85; %max taxel pressure [kPa]
 D.P_r.dmax=85; %max taxel pressure [kPa]
 D.P_l.tc=0.0038; %taxel length [m]
 D.P_r.tc=0.0038; %taxel length [m]
+D.P_l.N0=3; %max exertable normal force [N]
+D.P_r.N0=3; %max exertable normal foce [N]
 
 ts_l=filterTactileReadings(dat.ts_l);
 ts_r=filterTactileReadings(dat.ts_r);

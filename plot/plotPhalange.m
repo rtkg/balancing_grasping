@@ -22,5 +22,5 @@ end
 
 
 
-drawFrame(P.P_O_T,10,'P');
+drawFrame(P.P_O_T,15);
 
