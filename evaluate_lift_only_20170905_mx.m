@@ -18,7 +18,7 @@ props.task.uncertainty.n=0;
 n=size(data,2);
 m=obj.m; %the actual mass of the object
 disc=0.1:0.05:3; %factor to vary the actual mass
-
+disc=[0.4737 1 1.5263]; %corresponds to m=+/- 0.3
 for k=1:length(disc)
     obj.m=m*disc(k);
     for i=1:n

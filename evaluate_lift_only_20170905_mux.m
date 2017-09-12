@@ -18,6 +18,7 @@ props.task.uncertainty.n=0;
 n=size(data,2);
 mu=obj.mu; %the actual friction coefficient
 disc=0.1:0.05:3; %factor to vary the actual friction coefficient
+disc=[0.4048 1  1.5952]; %corresponds to mu +/- 0.5 
 
 for k=1:length(disc)
     obj.mu=mu*disc(k);

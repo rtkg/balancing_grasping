@@ -1,4 +1,4 @@
-function [acc tpr fpr tnr fnr]=analyzeResults(res, db)
+function [acc tpr fpr tnr fnr sr]=analyzeResults(res, db)
 %res ... n results 
 %db ... scalar decision boundary on res.q
 %--------------------------------
@@ -7,6 +7,7 @@ function [acc tpr fpr tnr fnr]=analyzeResults(res, db)
 %fpr ... false positive rate
 %tnr ... true negative rate
 %fnr ... false negative rate
+%sr  ... success rate
 
 n=numel(res.q);
 
@@ -46,3 +47,5 @@ tnr=numel(ind_tn)/numel(ind_n);
 fpr=1-tnr;
 fnr=1-tpr;
 acc=(numel(ind_tp)+numel(ind_tn))/(numel(ind_tp)+numel(ind_fp)+numel(ind_fn)+numel(ind_tn));
+sr=tpr/(tpr+fpr);
+

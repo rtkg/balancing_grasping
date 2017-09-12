@@ -20,7 +20,5 @@ for i=1:size(f,2)
     patch('Faces',f(:,i)','Vertices',v','FaceAlpha',1.0,'FaceColor',col);
 end
 
-
-
 drawFrame(P.P_O_T,15);
 
