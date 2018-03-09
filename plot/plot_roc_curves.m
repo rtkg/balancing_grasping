@@ -56,7 +56,7 @@ disp(msg);
 
 
 plot(fpr*100,tpr*100,'b','LineWidth',3);
-h=legend('center point augmentation','vertex augmentation','Location','SouthEast');
+h=legend('CPA','VA','Location','SouthEast');
 set(h,'Interpreter','latex','FontSize',font_size);
 pbaspect([1.5,1,1]);
 %%%%%%%%%%%%%%%%%%%%%% saving  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

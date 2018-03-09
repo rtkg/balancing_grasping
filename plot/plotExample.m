@@ -28,11 +28,12 @@ drawFrame(T_obj,15);
 drawFrame(P_l_.C,15);
 drawFrame(P_r_.C,15);
 
-% options.EdgeColor='k';
-% options.FaceColor=[0.1 0.1 0.1];
-% options.FaceAlpha=0.1;
-% options.LineWidth=1;
-% plotObject(weiss_fingertip,C.P_r.P_O_T,options);
+options.EdgeColor='none';
+options.FaceColor=[0.1 0.1 0.1];
+options.FaceAlpha=0.1;
+options.LineWidth=1;
+C.P_r.P_O_T(3,4)=-10;
+plotObject(weiss_fingertip,C.P_r.P_O_T,options);
 
 axis equal; rotate3d on; axis off;
 view(68,50); %above
@@ -40,8 +41,9 @@ set(gca,'box','off');
 set(gcf,'units','normalized','outerposition',[0 0 1 1]);
 set(gcf,'PaperPositionMode','auto','PaperType','a0');
 %print(gcf,'example','-dpdf', '-r0','-fillpage');
-print(gcf,'example_1','-dpng', '-r900');
+%print(gcf,'example_1','-dpng', '-r900');
 
+return;
 %plot the tactile data with the pressure center coordinate frame
 figure(2);
 set(gcf,'units','normalized','outerposition',[0 0 1 1]);
@@ -59,4 +61,4 @@ set(gcf,'PaperPositionMode','auto','PaperType','a4');
 plotPhalange(C.P_r);
 view(0,90);
 axis equal; axis off;
-print(gcf,'example_3','-dpng', '-r600');
+%print(gcf,'example_3','-dpng', '-r600');

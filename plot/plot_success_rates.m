@@ -23,7 +23,7 @@ set(b(3),'FaceColor','g');
 set(b(4),'FaceColor','r');
 
 ylabels={' 50'; ' 60'; ' 70'; ' 80'; ' 90'; '100'};
-xlabels={'center point augmentation'; 'vertex augmentation'};
+xlabels={'CPA'; 'VA'};
 set(gca,'XTickLabel',xlabels);
 
 h=legend('ACC','SR','TPR','TNR','Location','NorthEast');
@@ -33,7 +33,7 @@ h = get(gca,'ylabel');
 set(h,'Position',get(h,'Position')+[-0.05 0 0]);
 set(gca,'XTickLabel',{' '});
 set(gca,'YTickLabel',{' '});
-pos=[0.61 1.7];
+pos=[0.94 1.95];
 for i=1:length(xlabels)
     text(pos(i),-3.5,0,xlabels(i),'Interpreter','Latex','fontsize',font_size);
 end   
